@@ -1,18 +1,26 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {UserComponent} from './user/user.component';
+import {HttpModule} from '@angular/http';
+import {TransactionComponent} from './transaction/transaction.component';
+
+import {NgPipesModule} from 'ngx-pipes';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserComponent,
+    TransactionComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpModule,
+    NgPipesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
